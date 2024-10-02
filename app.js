@@ -119,21 +119,21 @@
 
 //// Array2. n natural soni va A, B butun sonlari berilgan (n > 2). a[0] = A; a[1] = B; boshqa elementlari o'zidan oldingi barcha elementlari yig'indisiga teng bo'lgan massivni hosil qiling va elementlarini chiqaring. Input: n = 5, A = 2, B = 3 Output: [2, 3, 5, 10, 20]
 
-// const n = 5;
-// const A = 2;
-// const B = 3;
-// let a = new Array(n);
+// let n = 7;
+// let a = 3;
+// let b = 5;
+// let result = [];
 
-// a[0] = A;
-// a[1] = B;
-
-// for (let i = 2; i < n; i++) {
-//   a[i] = 0;
-//   for (let j = 0; j < i; j++) {
-//     a[i] += a[j];
+// result[0] = a;
+// result[1] = b;
+// for (let i = 0; i < n; i++) {
+//   let counter = 0;
+//   for (let k = 0; k < result.length; k++) {
+//     counter += result[k];
 //   }
+//   result.push(counter);
 // }
-// console.log(a);
+// console.log(result);
 
 /* 3-masala */
 
@@ -154,6 +154,7 @@
 // const n = arr.length;
 // let result = [];
 // let counter = 0;
+
 // for (let i = 0; i <= n; i++) {
 //   if (i % 2 == 1) {
 //     result.push(i);
@@ -165,20 +166,21 @@
 
 /* 5-masala */
 
-//// Array5. n ta elementdan tashkil topgan massiv berilgan. Massivda qatnashgan sonlardan faqat bittadan chiqaruvchi getSingleArr(arr) tuzilsin. Input: let arr = [7, 4, 2, 3, 1, 4, 5, 2, 4, 5, 7] Output: [7, 4, 2, 3, 1, 5]
+//// n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juftlarini indekslari o'sish tartibida chiqaruvchi, keyin massiv elementlari orasidan toqlarini indekslari kamayish tartibida chiqaruvchi programma tuzilsin. Massiv elementlar: 45 7 8 6 9 Natija: 4 8 6 9 7 5
 
-// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// const n = arr.length;
-// let result = [];
-// let counter = 0;
-// for (let i = 1; i <= n; i++) {
-//   if (i % 2 == 0) {
-//     result.push(i);
-//     counter++;
+// let n = [4, 5, 7, 8, 6, 9];
+// let k = [];
+// for (i = 0; i < n.length; i++) {
+//   if (n[i] % 2 == 0) {
+//     k.push(n[i]);
 //   }
 // }
-// console.log(result);
-// console.log(counter);
+// for (i = n.length; i > 0; i--) {
+//   if (n[i] % 2 == 1) {
+//     k.push(n[i]);
+//   }
+// }
+// console.log(k);
 
 /* 6-masala */
 
@@ -195,10 +197,10 @@
 
 //// Array7. n ta elementdan tashkil topgan massiv berilgan (n juft son). Massiv elementlari orasidan quyidagilarini chiqaruvchi programma tuzilsin. A[n-1], A[n-3], ... A[1]. Shart operatori ishlatilmasin.
 
-// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // const n = arr.length;
 
-// for (let i = n; i >= 0; i -= 2) {
+// for (let i = n - 1; i >= 0; i -= 2) {
 //   console.log(arr[i]);
 // }
 
@@ -237,6 +239,18 @@
 /* 10- masala */
 
 //// Array10. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini quyidagicha chiqaruvchi programma tuzilsin. A[0], A[1], A[n-1], A[n-2], A[2], A[3], A[n-3], A[n-4], ...
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// let n = arr.length;
+// for (let i = 0; i < Math.ceil(n / 2); i++) {
+//   if (i < n) {
+//     console.log(arr[i]);
+//   }
+//   if (n - 1 - i > i) {
+//     console.log(arr[n - 1 - i]);
+//   }
+// }
 
 /* 11- masala */
 
